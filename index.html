@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akash Pal | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  // Visitor Counter using countapi
+  fetch('https://api.countapi.xyz/hit/akash-portfolio/visits')
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById('visitor-count').innerText = res.value;
+    });
+</script>
+
+<body>
+  <!-- Background Animation -->
+  <div class="animated-bg"></div>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="assets/profile.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Akash Pal</h1>
+        <p>⊚ BHU '27</p>
+        <p>⊚ RKMRC '25</p>
+        <P>⊚ RKMVP '22</P>
+        <p>M.Sc Computer Science Student</p>
+
+        <!-- Official Logo Buttons -->
+        <div class="profile-buttons">
+          <a href="https://www.linkedin.com/in/akash-pal-null0007/" target="_blank">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="mailto:akashpal5394@gmail.com" target="_blank">
+            <img src="assets/icons/Gmail_Icon.png" alt="Email">
+          </a>
+          <a href="https://wa.me/917001542083" target="_blank">
+            <img src="assets/icons/WhatsApp.SVG" alt="WhatsApp">
+          </a>
+        </div>
+      </div>
+
+      <!-- Flip-Flop Address Card -->
+      <div class="address-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>🏠 Permanent Address</h3>
+            <p>Simla,Sonamukhi,<br> Bankura, West Bengal<br>722207</p>
+          </div>
+          <div class="card-back">
+            <h3>📍 Current Address</h3>
+            <p>Banaras Hindu University,<br> Varanasi, Uttar Pradesh</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    
+    <!-- End of Sidebar -->
+
+    <!-- Overlay for Mobile Sidebar -->
+    <div class="overlay" onclick="document.querySelector('.sidebar').classList.remove('open'); document.querySelector('.overlay').classList.remove('show')"></div>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="hamburger" onclick="
+          document.querySelector('.sidebar').classList.toggle('open');
+          document.querySelector('.overlay').classList.toggle('show');
+        ">☰</div>
+        <div class="card-grid">
+          <div class="card">
+            <a href="#about" class="btn">ABOUT</a>     
+            <a href="#education" class="btn">EDUCATION</a>
+            <a href="#skills" class="btn">SKILLS</a>
+            <a href="#projects"class="btn">PROJECTS</a>
+            <!--<a href="#certificates"class="btn">CERTIFICATE</a>-->
+            <a href="#contact"class="btn">CONTACT</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <h1>Hi, I'm <span>Akash Pal</span></h1>
+        a passionate problem <b>solver, coder, and aspiring data scientist</b> with 
+        a strong interest in <b>machine learning, natural language processing, 
+        and data-driven research</b>. I enjoy exploring real-world problems and 
+        building innovative solutions through the power of data and algorithms.
+        <p>
+        Beyond academics and technology, I have also built a strong foundation
+        in discipline, teamwork, and leadership through my active involvement
+        in sports and the <b>National Cadet Corps (NCC)</b>. I had the honor of 
+        representing my college(RKMRC) in a <b>university-level football match</b>
+        and also participated in <b>discus throw events at district level</b>, 
+        which helped me develop resilience, focus, and a competitive spirit.
+        NCC further instilled in me values of discipline, responsibility, and service 
+        to the nation, shaping me into a balanced individual with both technical expertise 
+        and personal strength.
+        </p>
+        <p>
+        I am continuously improving my professional presence through
+        <b>GitHub</b> contributions, <b>portfolio development</b>, and <b>LinkedIn</b>
+        networking. With curiosity, creativity, and determination, 
+        I am committed to learning, innovating, and contributing to 
+        impactful projects in the field of data science and artificial 
+        intelligence.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section">
+        <h2>🎓 Education</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>M.Sc in Computer Science</h3>
+            <p>Banaras Hindu University (BHU) — Pursuing</p>
+          </div>
+          <div class="card">
+            <h3>B.Sc in Computer Science</h3>
+            <p>Ramakrishna Mission Residential College, Narendrapur (2022 - 2025)</p>
+            <p>Grade - 1st class</p>
+          </div>
+          <div class="card">
+            <h3>Higher secondary (XII) </h3>
+            <p>Ramakrishna Mission Vidyapith, Purulia (2022)</p>
+            <p>Subject combination-PCMB    90.2%</p>
+          </div>
+          <div class="card">
+            <h3>Secondary (X) </h3>
+            <p>Kamarpukur Ramakrishna Mission Multipurpose School (2020) </p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <h2>🛠️ Skills</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Programming Languages</h3>
+            <p>Python, C, JavaScript, Java, HTML, CSS</p>
+          </div>
+          <div class="card">
+            <h3>Frameworks & Libraries</h3>
+            <p>TensorFlow, Keras, Scikit-learn, Pandas, NumPy</p>
+          </div>
+          <div class="card">
+            <h3>Tools & Technologies</h3>
+            <p>Git, GitHub, Jupyter Notebook, VS Code</p>
+          </div>
+          <div class="card">
+            <h3>Soft Skills</h3>
+            <p>Problem Solving, Teamwork, Leadership, Communication</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <h2>💻 Projects</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>A responsive portfolio with animations, built with HTML, CSS & JS.</p>
+          </div>
+          <div class="card">
+            <h3>Toxic Comment Classification</h3>
+            <p>Applied Machine Learning models to detect and classify harmful comments.</p>
+            <a href="assets/projects/project_ppt.pdf" target="_blank" class="btn">View PPT</a>
+            <a href="assets/projects/project_pdf.pdf" target="_blank" class="btn">View Report</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <h2>☎️ Contact</h2>
+        <p>📧 <a href="mailto:akashpal5394@gmail.com"> Email</a></p>
+        <p>💬 <a href="https://wa.me/917001542083" target="_blank"> WhatsApp</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/akash-pal-null0007/" target="_blank"> LinkedIn</a></p>
+        <p>📞 <a href="tel:+917001542083">Call me: +91 7001542083</a></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+<script src="script.js"></script>
+<script>
+  // Toggle sidebar on hamburger click
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.toggle('open');
+    document.querySelector('.overlay').classList.toggle('show');
+  });
+</script>
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+   <!-- End Sidebar Footer -->
+    <div class="end_sidebar">
+      <p>© 2025 Akash Pal</p>
+      <p>All rights reserved.</p>
+      <p>Made with ❤️ by Akash Pal</p>
+      <p>Last updated: 2025</p>
+    </div>
+  
